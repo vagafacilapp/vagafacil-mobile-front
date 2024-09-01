@@ -1,33 +1,36 @@
 import React, { useState, useEffect, useRef } from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import MapView, { Marker } from "react-native-maps";
-
-import * as Location from "expo-location";
+import {
+  requestForegroundPermissionsAsync,
+  LocationObject,
+  getCurrentPositionAsync,
+  watchPositionAsync,
+  LocationAccuracy,
+} from "expo-location";
 export function Map() {
-  const [location, setLocation] = useState<Location.LocationObject | null>(
-    null
-  );
+  const [location, setLocation] = useState<LocationObject | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const mapRef = useRef<MapView>(null);
 
   useEffect(() => {
     (async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync();
+      let { status } = await requestForegroundPermissionsAsync();
       if (status !== "granted") {
         setErrorMsg("Permission to access location was denied");
         return;
       }
 
-      let location = await Location.getCurrentPositionAsync({});
+      let location = await getCurrentPositionAsync({});
       setLocation(location);
     })();
   }, []);
 
   useEffect(() => {
-    Location.watchPositionAsync(
+    watchPositionAsync(
       {
-        accuracy: Location.LocationAccuracy.Highest,
+        accuracy: LocationAccuracy.Highest,
         timeInterval: 1000,
         distanceInterval: 1,
       },
@@ -48,7 +51,7 @@ export function Map() {
 
   return (
     <View style={styles.container}>
-      {location && (
+      {location && !errorMsg ? (
         <MapView
           ref={mapRef}
           style={styles.map}
@@ -244,6 +247,8 @@ export function Map() {
             }}
           />
         </MapView>
+      ) : (
+        <Text>{errorMsg}</Text>
       )}
     </View>
   );
