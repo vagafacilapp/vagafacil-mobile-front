@@ -1,15 +1,29 @@
 import * as React from "react";
 import { createStaticNavigation } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import {
+  BottomTabBarProps,
+  createBottomTabNavigator,
+} from "@react-navigation/bottom-tabs";
 import { Start } from "@/app/start";
 import { Login } from "@/app/login";
 import { Home } from "@/app/home";
+import { NavBar } from "@/components/Navbar";
+import { Map } from "@/app/map";
+import { Profile } from "@/app/profile";
+import { Save } from "@/app/save";
 
-const RootStack = createNativeStackNavigator({
+const RootStack = createBottomTabNavigator({
+  tabBar: (props: BottomTabBarProps) => <NavBar {...props} />,
   screens: {
     Start: Start,
     Login: Login,
     Home: Home,
+    Map: Map,
+    Profile: Profile,
+    Save: Save,
+  },
+  screenOptions: {
+    animation: "fade",
   },
 });
 
