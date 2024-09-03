@@ -2,10 +2,6 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "import", "prettier"],
   "extends": [
-    "@rocketseat/eslint-config/next",
-    "plugin:testing-library/react",
-    "plugin:jest-dom/recommended",
-    "plugin:storybook/recommended",
     "eslint:recommended",
     "prettier"
   ],
