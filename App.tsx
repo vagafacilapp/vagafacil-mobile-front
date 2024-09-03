@@ -23,6 +23,7 @@ const RootStack = createBottomTabNavigator({
   screenOptions: {
     animation: 'fade',
   },
+  initialRouteName: 'Start',
 });
 
 const Navigation = createStaticNavigation(RootStack);
