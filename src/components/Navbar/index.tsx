@@ -2,13 +2,13 @@ import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { Button, View } from 'react-native';
 
-export function NavBar({ navigation }: BottomTabBarProps) {
+export function NavBar({ navigation }: Readonly<BottomTabBarProps>) {
   return (
     <View
       style={{
         flexDirection: 'row',
         justifyContent: 'space-around',
-        zIndex: 9999,
+        zIndex: 1,
       }}
     >
       <Button onPress={() => navigation.navigate('Home')} title="Home" />
