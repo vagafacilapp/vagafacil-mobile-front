@@ -1,6 +1,6 @@
-import { Text, View } from "react-native";
+import { Text, View } from 'react-native';
 
-export function Save() {
+export function SaveScreen() {
   return (
     <View>
       <Text>Welcome to the Save Screen!</Text>

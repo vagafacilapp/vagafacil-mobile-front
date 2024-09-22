@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "vagafacil-mobile-front",
-    "slug": "vagafacil-mobile-front",
+    "name": "vagafacil",
+    "slug": "vagafacil",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "scheme": "vagafacil",
     "splash": {
-      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
