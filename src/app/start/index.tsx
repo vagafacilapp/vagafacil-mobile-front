@@ -10,6 +10,7 @@ export function StartScreen() {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={require('../../assets/StartImage.png')} />
+      <Image style={styles.image} source={require('../../assets/routerDirection.png')} />
       <View style={styles.boxInfo}>
         <Text style={{ fontSize: 20, color: 'white' }}>Encontre a Vaga Perfeita</Text>
         <Text>Descubra e agende oportunidades de acordo com suas preferências</Text>

@@ -2,11 +2,12 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
+    position: 'relative',
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    position: 'relative',
+    overflow: 'hidden',
   },
   image: {
     height: '100%',
@@ -16,9 +17,15 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 20,
     marginTop: 20,
-    width: '80%',
+    width: '100%',
     padding: 20,
-    backgroundColor: '#ccc',
-    borderRadius: 10,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    backgroundColor: 'rgba(0, 0, 0, 0.03)',
+    flex: 1,
+    height: 340,
+  },
+  absolute: {
+    ...StyleSheet.absoluteFillObject,
   },
 });
