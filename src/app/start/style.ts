@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { colors } from '@/styles/colors';
+
 export const styles = StyleSheet.create({
   container: {
     position: 'relative',
@@ -13,8 +15,14 @@ export const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
   },
+  routerImage: {
+    position: 'absolute',
+    top: 240,
+  },
   boxInfo: {
     position: 'absolute',
+    justifyContent: 'space-between',
+    alignContent: 'center',
     bottom: 20,
     marginTop: 20,
     width: '100%',
@@ -25,7 +33,25 @@ export const styles = StyleSheet.create({
     flex: 1,
     height: 340,
   },
-  absolute: {
-    ...StyleSheet.absoluteFillObject,
+  button: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignContent: 'center',
+    backgroundColor: colors.primary,
+    borderRadius: 20,
+    marginTop: 20,
+  },
+  buttonText: {
+    color: colors.black,
+    fontSize: 25,
+    fontWeight: 'bold',
+  },
+  buttonArrow: {
+    width: 50,
+    height: 50,
+    backgroundColor: colors.black,
+    borderRadius: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
