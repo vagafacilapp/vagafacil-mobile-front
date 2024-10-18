@@ -4,8 +4,8 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-import { colors } from '@/styles/colors';
-import { fontFamily } from '@/styles/fontFamily';
+import { colors } from '@/globalStyles/colors';
+import { fontFamily } from '@/globalStyles/fontFamily';
 
 export const styles = StyleSheet.create({
   container: {
