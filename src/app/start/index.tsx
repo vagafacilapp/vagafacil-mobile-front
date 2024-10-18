@@ -26,10 +26,10 @@ export function StartScreen() {
           source={require('../../assets/routerDirection.png')}
           resizeMode="contain"
         />
-        <BlurView intensity={100} style={styles.boxInfo}>
+        <BlurView style={styles.boxInfo} tint="dark" intensity={80}>
           <View style={styles.boxInfoTitle}>
             <Text style={styles.title}>
-              Encontre a <Text style={{ color: 'green' }}>Vaga</Text> Perfeita
+              Encontre a <Text style={styles.titleHighlight}>Vaga</Text> Perfeita
             </Text>
             <Text style={styles.subTitle}>
               Descubra e agende oportunidades de acordo com suas preferências

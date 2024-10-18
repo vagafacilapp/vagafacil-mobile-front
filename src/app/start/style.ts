@@ -48,6 +48,9 @@ export const styles = StyleSheet.create({
     textAlign: 'left',
     fontSize: wp('8%'),
   },
+  titleHighlight: {
+    color: colors.primary,
+  },
   subTitle: {
     fontFamily: fontFamily.regularLight,
     color: colors.white,
@@ -63,7 +66,6 @@ export const styles = StyleSheet.create({
     borderRadius: wp('10%'),
     paddingVertical: hp('1%'),
     paddingHorizontal: wp('2%'),
-    // alignSelf: 'flex-start',
     marginTop: hp('2%'),
     width: wp('65%'),
   },
