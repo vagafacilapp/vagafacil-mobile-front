@@ -8,16 +8,17 @@ import { MapScreen } from '@/app/map';
 import { SaveScreen } from '@/app/save';
 import { ProfileScreen } from '@/app/profile';
 import { LoginScreen } from '@/app/login';
+import { RootStackParamList, RootTabParamList } from '@/types/navigation';
 
-const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
+const Tab = createBottomTabNavigator<RootTabParamList>();
 
 const TabNavigation = () => (
   <Tab.Navigator>
     <Tab.Screen name="Home" component={HomeScreen} />
-    <Tab.Screen name="Mapa" component={MapScreen} />
-    <Tab.Screen name="Favoritos" component={SaveScreen} />
-    <Tab.Screen name="Perfil" component={ProfileScreen} />
+    <Tab.Screen name="Map" component={MapScreen} />
+    <Tab.Screen name="Save" component={SaveScreen} />
+    <Tab.Screen name="Profile" component={ProfileScreen} />
   </Tab.Navigator>
 );
 

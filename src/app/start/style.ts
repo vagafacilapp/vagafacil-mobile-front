@@ -1,50 +1,79 @@
 import { StyleSheet } from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 import { colors } from '@/styles/colors';
+import { fontFamily } from '@/styles/fontFamily';
 
 export const styles = StyleSheet.create({
   container: {
     position: 'relative',
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',
   },
   image: {
-    height: '100%',
+    position: 'absolute',
     width: '100%',
+    height: '100%',
   },
   routerImage: {
     position: 'absolute',
-    top: 240,
+    top: hp('12%'),
+    right: wp('1%'),
+    width: wp('100%'),
+    height: undefined,
+    aspectRatio: 1,
   },
   boxInfo: {
     position: 'absolute',
-    justifyContent: 'space-between',
-    alignContent: 'center',
-    bottom: 20,
-    marginTop: 20,
+    bottom: 0,
     width: '100%',
-    padding: 20,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    backgroundColor: 'rgba(0, 0, 0, 0.03)',
-    flex: 1,
-    height: 340,
+    padding: wp('5%'),
+    borderTopLeftRadius: wp('5%'),
+    borderTopRightRadius: wp('5%'),
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    alignItems: 'flex-start',
+  },
+  boxInfoTitle: {
+    marginTop: hp('2%'),
+    alignItems: 'flex-start',
+  },
+  title: {
+    fontFamily: fontFamily.bold,
+    color: colors.white,
+    textAlign: 'left',
+    fontSize: wp('8%'),
+  },
+  subTitle: {
+    fontFamily: fontFamily.regularLight,
+    color: colors.white,
+    textAlign: 'left',
+    marginTop: hp('1%'),
+    fontSize: wp('4%'),
   },
   button: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignContent: 'center',
+    alignItems: 'center',
     backgroundColor: colors.primary,
-    borderRadius: 20,
-    marginTop: 20,
+    borderRadius: wp('10%'),
+    paddingVertical: hp('1%'),
+    paddingHorizontal: wp('2%'),
+    // alignSelf: 'flex-start',
+    marginTop: hp('2%'),
+    width: wp('65%'),
   },
   buttonText: {
+    fontFamily: fontFamily.medium,
     color: colors.black,
-    fontSize: 25,
-    fontWeight: 'bold',
+    textAlign: 'center',
+    marginRight: wp('2%'),
+    paddingHorizontal: wp('5%'),
+    fontSize: wp('6%'),
   },
   buttonArrow: {
     width: 50,
